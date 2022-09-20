@@ -1,0 +1,31 @@
+{
+  "name": "qacart-courses-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p server client",
+    "server": "node server.js",
+    "client": "node client.js",
+    "cy:run": "cypress run --record --key 278c27b9-8646-41c6-b591-cb6332f25fba --parallel",
+    "test": "start-server-and-test start http://localhost:3000 cy:run"
+  },
+  "author": "Bilal Zafar",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^1.1.0",
+    "cypress": "^6.4.0",
+    "express-jwt": "^5.1.0",
+    "json-server": "^0.9.1",
+    "jsonwebtoken": "^7.1.9",
+    "start-server-and-test": "^1.12.0"
+  },
+  "standard": {
+    "env": [
+      "node"
+    ]
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.1"
+  }
+}
